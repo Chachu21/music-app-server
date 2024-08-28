@@ -16,6 +16,9 @@ app.use(cors());
 app.use(express.json());
 
 //routes
+app.get("/", (req, res) => {
+  res.send("Hello, World!");
+});
 app.use("/api", songRouter);
 
 const PORT = process.env.PORT || 5000;
